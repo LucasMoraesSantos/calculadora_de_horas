@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora de Horas</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <p class="badge">Ferramenta online</p>
+        <h1>Calculadora de Horas</h1>
+        <p class="subtitle">
+          Descubra o total entre dois horários e, se quiser, some ou subtraia um
+          período adicional.
+        </p>
+      </header>
+
+      <section class="card inputs-card">
+        <h2>Período</h2>
+        <div class="grid two-cols">
+          <label>
+            Data inicial
+            <input id="startDate" type="date" required />
+          </label>
+          <label>
+            Hora inicial
+            <input id="startTime" type="time" required />
+          </label>
+          <label>
+            Data final
+            <input id="endDate" type="date" required />
+          </label>
+          <label>
+            Hora final
+            <input id="endTime" type="time" required />
+          </label>
+        </div>
+      </section>
+
+      <section class="card adjust-card">
+        <h2>Ajuste opcional</h2>
+        <div class="adjust-row">
+          <label>
+            Operação
+            <select id="operation">
+              <option value="add">Somar</option>
+              <option value="subtract">Subtrair</option>
+            </select>
+          </label>
+          <label>
+            Horas
+            <input id="adjustHours" type="number" min="0" value="0" />
+          </label>
+          <label>
+            Minutos
+            <input id="adjustMinutes" type="number" min="0" max="59" value="0" />
+          </label>
+        </div>
+      </section>
+
+      <div class="actions">
+        <button id="calculateBtn" type="button">Calcular</button>
+        <button id="resetBtn" type="button" class="secondary">Limpar</button>
+      </div>
+
+      <section class="card result-card" id="resultCard" aria-live="polite">
+        <h2>Resultado</h2>
+        <div class="result-grid">
+          <div>
+            <span class="label">Diferença original</span>
+            <strong id="baseResult">--:--</strong>
+          </div>
+          <div>
+            <span class="label">Ajuste aplicado</span>
+            <strong id="adjustmentResult">+00:00</strong>
+          </div>
+          <div>
+            <span class="label">Resultado final</span>
+            <strong id="finalResult">--:--</strong>
+          </div>
+        </div>
+        <p id="resultText" class="helper">Preencha os campos e clique em calcular.</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
