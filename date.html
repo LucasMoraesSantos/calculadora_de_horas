@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adição e Subtração de Data</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <p class="badge">Nova tela</p>
+        <h1>Adição e Subtração de Data</h1>
+        <p class="subtitle">
+          Some ou subtraia anos, meses, semanas e dias a partir de uma data base.
+        </p>
+      </header>
+
+      <nav class="card nav-card">
+        <a class="nav-link" href="index.html">Calculadora de Horas</a>
+        <a class="nav-link active" href="date.html">Calculadora de Data</a>
+      </nav>
+
+      <section class="card inputs-card">
+        <h2>Data base</h2>
+        <div class="grid two-cols">
+          <label>
+            Data inicial
+            <input id="baseDate" type="date" required />
+          </label>
+          <label>
+            Operação
+            <select id="dateOperation">
+              <option value="add">Somar</option>
+              <option value="subtract">Subtrair</option>
+            </select>
+          </label>
+        </div>
+      </section>
+
+      <section class="card adjust-card">
+        <h2>Período para ajuste</h2>
+        <div class="adjust-row four-cols">
+          <label>
+            Anos
+            <input id="years" type="number" min="0" value="0" />
+          </label>
+          <label>
+            Meses
+            <input id="months" type="number" min="0" value="0" />
+          </label>
+          <label>
+            Semanas
+            <input id="weeks" type="number" min="0" value="0" />
+          </label>
+          <label>
+            Dias
+            <input id="days" type="number" min="0" value="0" />
+          </label>
+        </div>
+      </section>
+
+      <div class="actions">
+        <button id="dateCalculateBtn" type="button">Calcular data</button>
+        <button id="dateResetBtn" type="button" class="secondary">Limpar</button>
+      </div>
+
+      <section class="card result-card" aria-live="polite">
+        <h2>Resultado</h2>
+        <div class="result-grid">
+          <div>
+            <span class="label">Data de origem</span>
+            <strong id="originResult">--/--/----</strong>
+          </div>
+          <div>
+            <span class="label">Período aplicado</span>
+            <strong id="periodResult">+0a 0m 0s 0d</strong>
+          </div>
+          <div>
+            <span class="label">Data final</span>
+            <strong id="dateResult">--/--/----</strong>
+          </div>
+        </div>
+        <p id="weekdayResult" class="helper">Informe os dados para realizar o cálculo.</p>
+      </section>
+    </main>
+
+    <script src="date-script.js"></script>
+  </body>
+</html>
