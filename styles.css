@@ -110,6 +110,8 @@ button {
 
 input,
 select {
+  width: 100%;
+  min-width: 0;
   border-radius: 10px;
   border: 1px solid var(--border);
   background: rgba(15, 23, 42, 0.78);
@@ -136,7 +138,7 @@ button:focus,
 }
 
 .six-cols {
-  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
 }
 
 .time-grid {
@@ -158,6 +160,8 @@ button:focus,
 
   .time-grid,
   .adjust-grid-hours,
+  .four-cols,
+  .six-cols,
   .result-grid {
     grid-template-columns: 1fr;
   }
