@@ -139,6 +139,34 @@ button:focus,
   grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
 }
 
+.time-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.adjust-grid-hours {
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 1rem 0.75rem;
+  }
+
+  .card {
+    padding: 0.9rem;
+  }
+
+  .time-grid,
+  .adjust-grid-hours,
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+}
+
 .actions {
   display: flex;
   flex-wrap: wrap;
