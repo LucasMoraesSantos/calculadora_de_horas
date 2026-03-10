@@ -135,6 +135,10 @@ button:focus,
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 }
 
+.six-cols {
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+}
+
 .actions {
   display: flex;
   flex-wrap: wrap;

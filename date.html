@@ -12,7 +12,7 @@
         <p class="badge">Nova tela</p>
         <h1>Adição e Subtração de Data</h1>
         <p class="subtitle">
-          Some ou subtraia anos, meses, semanas e dias a partir de uma data base.
+          Some ou subtraia períodos completos e obtenha o resultado final de data e hora.
         </p>
       </header>
 
@@ -22,11 +22,11 @@
       </nav>
 
       <section class="card inputs-card">
-        <h2>Data base</h2>
+        <h2>Data e hora base</h2>
         <div class="grid two-cols">
           <label>
-            Data inicial
-            <input id="baseDate" type="date" required />
+            Data e hora inicial
+            <input id="baseDateTime" type="datetime-local" step="1" required />
           </label>
           <label>
             Operação
@@ -40,7 +40,7 @@
 
       <section class="card adjust-card">
         <h2>Período para ajuste</h2>
-        <div class="adjust-row four-cols">
+        <div class="adjust-row six-cols">
           <label>
             Anos
             <input id="years" type="number" min="0" value="0" />
@@ -57,11 +57,23 @@
             Dias
             <input id="days" type="number" min="0" value="0" />
           </label>
+          <label>
+            Horas
+            <input id="hours" type="number" min="0" value="0" />
+          </label>
+          <label>
+            Minutos
+            <input id="minutes" type="number" min="0" value="0" />
+          </label>
+          <label>
+            Segundos
+            <input id="seconds" type="number" min="0" value="0" />
+          </label>
         </div>
       </section>
 
       <div class="actions">
-        <button id="dateCalculateBtn" type="button">Calcular data</button>
+        <button id="dateCalculateBtn" type="button">Calcular data e hora</button>
         <button id="dateResetBtn" type="button" class="secondary">Limpar</button>
       </div>
 
@@ -69,16 +81,20 @@
         <h2>Resultado</h2>
         <div class="result-grid">
           <div>
-            <span class="label">Data de origem</span>
-            <strong id="originResult">--/--/----</strong>
+            <span class="label">Origem</span>
+            <strong id="originResult">--/--/---- --:--:--</strong>
           </div>
           <div>
             <span class="label">Período aplicado</span>
-            <strong id="periodResult">+0a 0m 0s 0d</strong>
+            <strong id="periodResult">+0a 0m 0sem 0d 0h 0min 0seg</strong>
           </div>
           <div>
             <span class="label">Data final</span>
             <strong id="dateResult">--/--/----</strong>
+          </div>
+          <div>
+            <span class="label">Hora final</span>
+            <strong id="timeResult">--:--:--</strong>
           </div>
         </div>
         <p id="weekdayResult" class="helper">Informe os dados para realizar o cálculo.</p>
